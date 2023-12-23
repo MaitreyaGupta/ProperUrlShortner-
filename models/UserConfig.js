@@ -20,6 +20,6 @@ const Item1=new mongoose.Schema({
     ]
 })
 
-const User=mongoose.model("Item",Item1)
+const User=mongoose.model("User",Item1)
 
 module.exports=User;
