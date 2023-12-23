@@ -1,6 +1,6 @@
-module.exports={
+ module.exports={
     google:{
-        clientId:"325703856584-hgtjhtqvuke448d0hsmntgog7lr4sirc.apps.googleusercontent.com",
-        clientSecret:"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"
+        clientId:"325703856584-gkvpo0ntu81mh7hljt4ooeqaqic99388.apps.googleusercontent.com",
+        clientSecret:"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"
     }
 }
