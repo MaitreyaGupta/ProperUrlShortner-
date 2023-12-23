@@ -20,7 +20,7 @@ const Item=new mongoose.Schema({
     ]
 })
 
-User=mongoose.model("User",ItemMode)
+User=mongoose.model("User",Item)
 
 
 module.exports=User;
