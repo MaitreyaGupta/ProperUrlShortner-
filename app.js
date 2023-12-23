@@ -19,6 +19,7 @@ app.set("view engine","ejs")
 app.use(passport.initialize());
 app.use(urlencoded({extended:false}))
 app.use(session({secret:"secret"},{resave:false},{saveUninitialized:true}));
+app.enable("trust proxy");
 
 const port=3030
 
