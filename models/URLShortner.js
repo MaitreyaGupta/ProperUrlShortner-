@@ -18,8 +18,13 @@ const Item=new mongoose.Schema({
         type=String,
         require=true,
     ]
-},{strict:false})
+})
+let ItemMode
+try {
+  ItemMode = mongoose.model('users')
+} catch (error) {
+  ItemMode = mongoose.model('users',Item)
+}
 
-const ItemMode=mongoose.model("Item",Item)
 
 module.exports=ItemMode;
