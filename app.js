@@ -70,7 +70,7 @@ app.get("/google",passport.authenticate('google',{
     scope:['profile'],
 }))
 
-passport.get("/auth/google/redirect",async function(req,res){
+app.get("/auth/google/redirect",async function(req,res){
  res.render("UrlShortnerFirstTime")
 })
 
