@@ -20,6 +20,6 @@ const Item=new mongoose.Schema({
     ]
 })
 
-const ItemMode=mongoose.model("Item",Item)
+const User=mongoose.model("Item",Item)
 
-module.exports=ItemMode;
+module.exports=User;
