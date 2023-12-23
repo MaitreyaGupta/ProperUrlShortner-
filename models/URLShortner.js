@@ -23,4 +23,4 @@ const Item=new mongoose.Schema({
 ItemMode=mongoose.model("ItemMode",Item)
 
 
-module.exports=User;
+module.exports=ItemMode;
