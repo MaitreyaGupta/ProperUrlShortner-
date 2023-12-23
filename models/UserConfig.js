@@ -1,7 +1,7 @@
 const mongoose=require("mongoose")
 const MongoDb=require("../config/mongoose1")
 
-const Item=new mongoose.Schema({
+const Item1=new mongoose.Schema({
     username:
     [
         type=String,
@@ -20,6 +20,6 @@ const Item=new mongoose.Schema({
     ]
 })
 
-const User=mongoose.model("Item",Item)
+const User=mongoose.model("Item",Item1)
 
 module.exports=User;
