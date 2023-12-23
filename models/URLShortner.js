@@ -19,7 +19,7 @@ const Item=new mongoose.Schema({
         require=true,
     ]
 })
-mongoose.models = {}
+
 const ItemMode=mongoose.model("Item",Item)
 
 module.exports=ItemMode;
