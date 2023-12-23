@@ -20,7 +20,7 @@ app.use(passport.initialize());
 app.use(urlencoded({extended:false}))
 app.use(session({secret:"secret"},{resave:false},{saveUninitialized:true}));
 
-const port=process.enc.port
+const port=process.env.port
 
  
 
