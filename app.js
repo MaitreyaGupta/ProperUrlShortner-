@@ -20,18 +20,19 @@ app.use(passport.initialize());
 app.use(urlencoded({extended:false}))
 app.use(session({secret:"secret"},{resave:false},{saveUninitialized:true}));
 
+ const port=env.Process.port||3030
 
  
 
 
 
-app.listen(8080,function(req,res){
+app.listen(port,function(req,res){
     console.log("Url Shortner is listening")
 })
 app.get("/",function(req,res){
  res.render("Home");
 })
-app.get(8080,function(req,res){
+app.get(port,function(req,res){
     res.render("Home");
 })
 app.post("/",async function(req,res){
