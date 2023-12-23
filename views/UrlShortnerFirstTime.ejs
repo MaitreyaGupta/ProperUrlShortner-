@@ -1,0 +1,22 @@
+
+
+<%- include("Header") -%>
+<body>
+   <form method="post" action="/UrlShortner" class="UrlShortnerForm">
+      <label for="fullUrl" class="sr-only">URL Shrinker</label>
+        <input required placeholder="Url" type="url" name="fullUrl" id="fullUrl" class="Input COntrol">Please Enter the url here</input>
+        <button class="btn btn-succes" type="submit">Shrink</button>
+   </form>
+   <table>
+      <thread>
+         <tr>
+            <th>Full Url</th>
+            <th>Shortend URL</th>
+            <th>Clicks</th>
+         </tr>
+         <tbody> 
+            
+         </tbody>
+      </thread>
+   </table>
+</body>
