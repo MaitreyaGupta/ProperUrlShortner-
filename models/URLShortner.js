@@ -1,26 +1,27 @@
+const { url } = require("inspector")
 const mongoose=require("mongoose")
-const MongoDb=require("../config/mongoose1")
-
-const Item=new mongoose.Schema({
-    username:
-    [
-        type=String,
-        require=true,
-        unique=true 
-    ],
-    password:
-    [
-        type=String,
-        require=true,
-        unique=true
-    ],
-    recoveryPhoneNo:[
-        type=String,
-        require=true,
-    ]
-})
-
-ItemMode=mongoose.model("ItemMode",Item)
+const shortId=require("short-id")
+shortId.generate()
 
 
-module.exports=ItemMode;
+const shortUrl=new mongoose.Schema({
+    full:{
+        type:String,
+        require:true,
+    },
+    short:{
+        type:String,
+        require:true,
+        default:shortId.generate,
+    },
+    clicks:{
+        type:Number,
+        require:true,
+        default:0,
+    }
+},{strict:false})
+mongoose.models = {}
+
+shortUrlModel=mongoose.model("shortUrlModel",shortUrl)
+
+module.exports=shortUrlModel
