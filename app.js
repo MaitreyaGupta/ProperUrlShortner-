@@ -6,7 +6,7 @@ const session=require("express-session")
 const MongoDB=require("./config/mongoose1")
 const mongoose=require("mongoose");
 const passport=require("passport")
-const User=require("./models/UserConfig")
+const UserBaba=require("./models/UserConfig")
 const LocalAuth=require("passport-google").Strategy
 const GooglePassport=require("passport-google-oauth20")
 const keys=require("./config/keys")
@@ -39,7 +39,7 @@ app.get(port,function(req,res){
 app.post("/",async function(req,res){
     try
     {
-     const check=await User.findOne({username:req.body.Name})
+     const check=await UserBaba.findOne({username:req.body.Name})
      if(check.password===req.body.Password)
      {
         res.render("URLShortnerFirstTime")
@@ -60,7 +60,7 @@ app.post("/SignUpForm",function(req,res){
         password:req.body.Password,
         recoveryPhoneNo:req.body.Phone
     }
-    User.insertMany([User1])
+    UserBaba.insertMany([User1])
     res.redirect("SignUpForm");
 })
 
