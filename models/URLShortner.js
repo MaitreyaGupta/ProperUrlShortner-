@@ -19,12 +19,8 @@ const Item=new mongoose.Schema({
         require=true,
     ]
 })
-let ItemMode
-try {
-  ItemMode = mongoose.model('users',Item)
-} catch (error) {
-  ItemMode = mongoose.model('users')
-}
+
+ItemMode=mongoose.model("Item",Item)
 
 
 module.exports=ItemMode;
