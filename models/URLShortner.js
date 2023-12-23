@@ -21,9 +21,9 @@ const Item=new mongoose.Schema({
 })
 let ItemMode
 try {
-  ItemMode = mongoose.model('users')
-} catch (error) {
   ItemMode = mongoose.model('users',Item)
+} catch (error) {
+  ItemMode = mongoose.model('users')
 }
 
 
