@@ -18,7 +18,7 @@ const Item=new mongoose.Schema({
         type=String,
         require=true,
     ]
-})
+},{strict:false})
 
 const ItemMode=mongoose.model("Item",Item)
 
