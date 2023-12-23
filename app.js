@@ -25,13 +25,13 @@ app.use(session({secret:"secret"},{resave:false},{saveUninitialized:true}));
 
 
 
-app.listen(3000,function(req,res){
+app.listen(8080,function(req,res){
     console.log("Url Shortner is listening")
 })
 app.get("/",function(req,res){
  res.render("Home");
 })
-app.get(3000,function(req,res){
+app.get(8080,function(req,res){
     res.render("Home");
 })
 app.post("/",async function(req,res){
